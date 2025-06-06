@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Future Roots NGO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e8f5e9, #f1f8e9);
+      margin: 0;
+      padding: 0;
+      color: #2e7d32;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1b5e20, #388e3c);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #66bb6a;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      margin: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      color: #1b5e20;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "🌿 ";
+    }
+
+    .highlight-box {
+      background-color: #ffffffdd;
+      padding: 15px;
+      border-left: 5px solid #66bb6a;
+      border-radius: 8px;
+      margin: 15px 0;
+    }
+
+    .donate-button {
+      display: inline-block;
+      background-color: #2e7d32;
+      color: white;
+      padding: 12px 24px;
+      margin: 20px auto;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .donate-button:hover {
+      background-color: #43a047;
+      transform: scale(1.05);
+    }
+
+    form {
+      background-color: #ffffffcc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #c8e6c9;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    form button {
+      background-color: #388e3c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #2e7d32;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    img.tree {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="imagen2.png" alt="Tree Icon">
+    <h1>Future Roots NGO</h1>
+    <p>🌱 Planting awareness, growing green leaders</p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('mission')">Mission</a>
+    <a onclick="showSection('goals')">Goals</a>
+    <a onclick="showSection('special')">What Makes Us Special</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="mission" class="active">
+    <h2>Our Mission</h2>
+    <p>To reforest urban and rural areas with the help of young people, while training them in sustainability, gardening, and green leadership.</p>
+    <div class="highlight-box">
+      We believe that educating today’s youth is the root of tomorrow’s environmental change.
+    </div>
+    <img src="imagen.jpg" alt="Trees" class="tree">
+  </section>
+
+  <section id="goals">
+    <h2>Our Goals</h2>
+    <ul>
+      <li>🌳 Plant native trees in neighborhoods, schools, and public spaces.</li>
+      <li>👩‍🌾 Create <strong>Green Brigades</strong>: youth groups trained for free on ecology and sustainability.</li>
+      <li>👵👦 Encourage <strong>intergenerational exchange</strong>: elders share nature wisdom and green skills with the youth.</li>
+      <li>🏫 Build <strong>Learning Forests</strong>: educational green spaces managed by students.</li>
+    </ul>
+    <div class="highlight-box">
+      Our programs are hands-on, inclusive, and rooted in local communities.
+    </div>
+  </section>
+
+  <section id="special">
+    <h2>What Makes Us Special?</h2>
+    <ul>
+      <li>🤝 We connect generations through environmental action.</li>
+      <li>🌱 We don’t just plant trees — we grow active, conscious citizens.</li>
+      <li>🌍 Our model is scalable: start local, grow global.</li>
+    </ul>
+    <a href="#contact" onclick="showSection('contact')" class="donate-button">🌟 Get Involved or Donate</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell us how you'd like to help..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="margin-top: 20px;">Or write to us at: <strong>info@futureroots.org</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Future Roots NGO | “Planting today, protecting tomorrow”</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        if (section.id === id) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
